@@ -1,0 +1,73 @@
+.about {
+  background: var(--surface);
+  padding: var(--sp-16) var(--sp-6);
+}
+
+.about__inner { max-width: var(--content-max); margin: 0 auto; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cobalt);
+  margin-bottom: var(--sp-2);
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  line-height: 1.12;
+  max-width: 14ch;
+  letter-spacing: -0.01em;
+}
+
+.about__grid {
+  margin-top: var(--sp-12);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+.about__text p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin-bottom: var(--sp-3);
+  max-width: 60ch;
+}
+
+.about__card {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: var(--sp-2);
+}
+
+.about__card-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.about__rows { margin-top: var(--sp-3); }
+
+.about__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.about__row:last-child { border-bottom: none; }
+
+.about__row dt { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+.about__row dd { font-size: 0.92rem; font-weight: 500; text-align: right; }
+.about__row dd.is-available { color: var(--cobalt-dim); }
+
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .about { padding: var(--sp-12) var(--sp-3); }
+}
